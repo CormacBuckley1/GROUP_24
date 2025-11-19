@@ -31,8 +31,7 @@ static void swapCards(Card* a, Card* b)
     //copys a into b
     a->rank = b->rank;
     a->suit = b->suit;
-
-    /* Copy the saved *a (stored in temp) into *b. */
+    //copys b into temp
     b->rank = temp.rank;
     b->suit = temp.suit;
 }
@@ -225,7 +224,7 @@ Card removeCard(CardDeck* deck, int index)
 	return removed;// return the removed card
 }
 /**
- * @brief Shuffle the deck using the Fisher–Yates shuffle algorithm.
+ * @brief Shuffle the deck using the Fisherâ€“Yates shuffle algorithm.
  * @details start from end of deck each card is swapped with another 
  * randomly selected card before its postion or at 
  * @param deck Pointer to the deck to shuffle
@@ -338,4 +337,5 @@ void freeDeck(CardDeck* deck)
 // run it and test it properly soz if it actually donst work
 //i also dont know if this is fully right due to not having the card.h
 // also need to add more comments later on sorry about that
+
 //also need to clean up my comments later sorry about that too
